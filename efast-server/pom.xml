@@ -15,12 +15,6 @@
     <artifactId>efast-server</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>com.ekko</groupId>
-            <artifactId>efast-spring-boot-starter-web</artifactId>
-            <version>${efast.vision}</version>
-        </dependency>
-
         <!-- spring boot 配置所需依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -35,13 +29,6 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+
 
 </project>

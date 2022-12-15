@@ -11,12 +11,28 @@
 
     <artifactId>efast-management-server</artifactId>
 
-    <properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.ekko</groupId>
+            <artifactId>efast-spring-boot-starter-web</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 
-        <!-- Maven 相关 -->
-        <java.version>17</java.version>
-        <maven.compiler.source>${java.version}</maven.compiler.source>
-        <maven.compiler.target>${java.version}</maven.compiler.target>
-    </properties>
+        <dependency>
+            <groupId>com.ekko</groupId>
+            <artifactId>efast-spring-boot-mybatis</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
