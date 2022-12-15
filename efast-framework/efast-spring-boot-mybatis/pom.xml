@@ -2,17 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>mom-spring-boot-starters</artifactId>
-        <groupId>com.xiaomi.momframework</groupId>
+        <groupId>com.ekko</groupId>
+        <artifactId>efast-framework</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>mybatis-mom-spring-boot-starter</artifactId>
+    <artifactId>efast-spring-boot-mybatis</artifactId>
 
     <dependencies>
-
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
@@ -26,6 +25,12 @@
             <artifactId>dynamic-datasource-spring-boot-starter</artifactId> <!-- 多数据源 -->
         </dependency>
 
+        <!-- 工具类相关 -->
+        <dependency>
+            <groupId>com.github.ulisesbocchio</groupId>
+            <artifactId>jasypt-spring-boot-starter</artifactId> <!-- 加解密 -->
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 
 </project>

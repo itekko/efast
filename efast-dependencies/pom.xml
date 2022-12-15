@@ -2,24 +2,37 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.xiaomi.momframework</groupId>
-    <artifactId>mom-dependencies</artifactId>
+    <groupId>com.ekko</groupId>
+    <artifactId>efast-dependencies</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>${project.artifactId}</name>
-    <description>基础 bom 文件，管理整个项目的依赖版本</description>
-    <url>https://XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</url>
     <properties>
-        <mybatis-plus.version>3.5.2</mybatis-plus.version>
-        <druid.version>1.2.14</druid.version>
-    </properties>
+        <!-- 统一依赖管理 -->
+        <spring.boot.version>3.0.0</spring.boot.version>
 
+        <!-- DB 相关 -->
+        <druid.version>1.2.15</druid.version>
+        <mybatis-plus.version>3.5.2</mybatis-plus.version>
+        <dynamic-datasource.version>3.5.2</dynamic-datasource.version>
+
+        <!-- 工具类相关 -->
+        <jasypt-spring-boot-starter.version>3.0.4</jasypt-spring-boot-starter.version>
+
+    </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!-- 统一依赖管理Springboot -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
@@ -33,9 +46,19 @@
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>dynamic-datasource-spring-boot-starter</artifactId> <!-- 多数据源 -->
-                <version>${mybatis-plus.version}</version>
+                <version>${dynamic-datasource.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.ulisesbocchio</groupId>
+                <artifactId>jasypt-spring-boot-starter</artifactId> <!-- 加解密 -->
+                <version>${jasypt-spring-boot-starter.version}</version>
             </dependency>
         </dependencies>
+
+
     </dependencyManagement>
+
+
 
 </project>
